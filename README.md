@@ -25,18 +25,4 @@ Run a single test class (example):
 mvn -Dtest=com.company.automation.tests.AuthTest test
 ```
 
-## Notes
-- Tests use WebDriverManager to manage browser binaries
-- Screenshots taken on failures are saved under `test-output/screenshots/`
 
-## Additional features added
-
-- Logging: Logback configuration included under `src/main/resources/logback.xml`.
-- ExtentReports: HTML report generated at `test-output/extent-report.html` (listener automatically creates it).
-- Docker: `docker-compose.yml` added to run a Selenium Standalone Chrome container. To use:
-
-  1. Start Docker (Docker Desktop)
-  2. Run `docker-compose up -d`
-  3. Set system property to use remote WebDriver (not yet wired) and run tests.
-
-- Screenshots: On failure screenshots saved under `test-output/screenshots/` and attached to Extent report.
